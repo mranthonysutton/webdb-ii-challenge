@@ -8,7 +8,7 @@ const server = express();
 server.use(helmet());
 server.use(express.json());
 
-server.use("/api/car/", CarRouter);
+server.use("/api/cars/", CarRouter);
 
 server.get("/", (req, res) => {
   res.send("<h3>API Running...</h3>");
