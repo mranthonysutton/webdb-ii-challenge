@@ -69,7 +69,6 @@ router.get("/:id", validateCarId, (req, res) => {
 
 router.post("/", validateAddCar, (req, res) => {
   const carData = req.carData;
-  res.status(200).json(carData);
 
   knex("cars")
     .insert(carData, "id")
